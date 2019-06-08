@@ -1,22 +1,155 @@
+/*GENERAL*/
+body{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Gabriela', serif;
+  font-weight: 400;
+}
+
+h1{
+  font-size: 4em;
+}
+
+.btn{
+  background-color: #a4c1d3;
+  border: solid #a4c1d3 2px;
+  color: #647b8a;
+  cursor: pointer;
+  padding: 10px 30px;
+  transition: 0.2s;
+}
+
+.btn:hover{
+  background-color: rgba(0, 0, 0, 0);
+	color: #a4c1d3;
+}
+
+/*GRID*/
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "Header Header" "Section-1 Image" "Section-2 Image";
+  grid-template-rows: 1fr 0.5fr 0.5fr;
+  grid-template-areas: "header header" "section-1 image" "section-2 image";
 }
 
-.Image {
-  grid-area: Image;
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.25fr 2fr 0.25fr;
+  grid-template-areas: "nav nav" ". content" "down down";
+  grid-area: header;
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+  color: #fff;
+	position: relative;
 }
 
-.Header {
-  grid-area: Header;
+.logo{
+  width: 50px;
+  height: auto;
 }
 
-.Section-2 {
-  grid-area: Section-2;
+.logo svg path, .down svg path{
+  fill: #fff;
 }
 
-.Section-1 {
-  grid-area: Section-1;
+.nav {
+  grid-area: nav;
+  border-bottom: solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+
+.nav ul{
+  list-style-type: none;
+}
+
+.nav li{
+  display: inline;
+}
+
+.nav li a{
+  width: 60px;
+}
+
+.content {
+  grid-area: content;
+  padding: 100px 100px 100px 0;
+}
+
+.down{
+  grid-area: down;
+  display: flex;
+  justify-content: center;
+}
+
+.down .icon{
+  width: 30px;
+  height: auto;
+}
+
+.section-1 {
+  grid-area: section-1;
+  background: #647b8a;
+  padding: 80px 100px;
+}
+
+.section-1 h2{
+  color: #9fbacd;
+}
+
+.section-1 h3{
+  color: #d6e1e5;
+}
+
+.section-1 p{
+  color: #a3b5bf;
+}
+
+.section-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "title" "icons";
+  grid-area: section-2;
+  background: #8d8b8a;
+  color: #dfdfdf;
+  padding: 80px 100px;
+}
+
+.title {
+  grid-area: title;
+}
+
+.icons{
+  grid-area: icons;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-2 .icon{
+  width: 80px;
+}
+
+.section-2 .icon svg path{
+  fill: #fff;
+}
+
+.image {
+  grid-area: image;
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
 }
