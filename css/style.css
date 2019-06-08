@@ -1,0 +1,22 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "Header Header" "Section-1 Image" "Section-2 Image";
+}
+
+.Image {
+  grid-area: Image;
+}
+
+.Header {
+  grid-area: Header;
+}
+
+.Section-2 {
+  grid-area: Section-2;
+}
+
+.Section-1 {
+  grid-area: Section-1;
+}
